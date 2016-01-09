@@ -1,0 +1,4 @@
+.editable {
+	cursor: pointer;
+	border-bottom: 1px dashed #AAA;
+}
