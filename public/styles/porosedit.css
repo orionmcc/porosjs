@@ -1,4 +1,73 @@
 .editable {
-	cursor: pointer;
-	border-bottom: 1px dashed #AAA;
+  cursor: pointer;
+  border-bottom: 1px dashed #AAA;
+}
+
+#poros-toggle.poros-menu-closed {
+  transform: rotate(-180deg);
+}
+#poros-toggle {
+  cursor: pointer;
+  position: fixed;
+  left: 15px;
+  top: 0;
+  z-index: 999999;
+
+  color: #444 !important;
+  font-size: 2em !important;
+  font-family: monospace;
+  letter-spacing: -.3em;
+  transition: transform .4s;
+}
+
+#poros-menu.poros-menu-closed {
+  transform: translate3d(-500px, 0px, 0px);
+}
+
+#poros-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 210px;
+  padding: 25px 15px;
+
+  z-index: 999999;
+  transform: translate3d(0px, 0px, 0px);
+
+  background-color: #EEE !important;
+  font-size: 1.5em;
+  transition: transform .4s;
+}
+
+#poros-menu h1, #poros-menu a {
+  color: #888 !important;
+  font-weight: lighter;
+  font-family: 'lato', 'helvetica', 'open sans', "droid sans", sans-serif !important;
+  text-decoration: none !important;
+
+  display: block;
+  margin: 10px 0;
+  padding: 0;
+}
+
+#poros-menu h1 {
+  color: #222 !important;
+  border-bottom: 1px solid #222;
+}
+
+#poros-menu a:hover {
+  color: #444 !important;
+  box-shadow: 1px 1px 10px #CCC!important;
+  padding: 3px !important;
+  margin: -3px !important;
+}
+
+#poros-menu ul {
+  margin: 0;
+  padding-left: 30px;
+}
+
+#poros-menu ul li {
+  list-style: none;;
 }
