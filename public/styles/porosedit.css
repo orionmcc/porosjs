@@ -15,13 +15,13 @@
 
   color: #444 !important;
   font-size: 2em !important;
-  font-family: monospace;
-  letter-spacing: -.3em;
-  transition: transform .4s;
+  font-family: monospace !important;
+  letter-spacing: -.3em !important;
+  transition: transform .4s !important;
 }
 
 #poros-menu.poros-menu-closed {
-  transform: translate3d(-500px, 0px, 0px);
+  transform: translate3d(-1500px, 0px, 0px);
 }
 
 #poros-menu {
@@ -70,4 +70,96 @@
 
 #poros-menu ul li {
   list-style: none;;
+}
+
+#poros-menu-close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+
+  color: #444 !important;
+  font-size: 2em !important;
+  font-family: monospace !important;
+  letter-spacing: -.3em !important;
+  transition: transform .4s !important;
+
+  cursor: pointer;
+}
+
+#poros-sub-menu.small {
+  position: fixed;
+  left: 242px;
+  top: 0;
+  bottom: 0;
+  padding: 25px 15px;
+  overflow: auto;
+
+  z-index: 999990;
+  transform: translate3d(0px, 0px, 0px);
+
+  background-color: #EEE !important;
+  font-size: 1.5em;
+  transition: transform .4s;
+}
+
+#poros-sub-menu.small {
+  width: 240px;
+  font-size: 1em;
+}
+
+#poros-sub-menu.poros-menu-closed {
+  transform: translate3d(-1000px, 0px, 0px);
+}
+
+#poros-sub-menu h2 {
+  font-size: 1.25em !important;
+  font-weight: normal !important;
+}
+
+#poros-sub-menu ul {
+  margin: 0;
+  padding-left: 10px;
+}
+
+#poros-sub-menu li {
+  margin-bottom: 20px;
+}
+
+
+#poros-sub-menu input, #poros-sub-menu textarea {
+  width: 100% !important;
+  border-radius: 3px !important;
+  box-sizing: border-box !important;
+  padding: 10px !important;
+  border: 1px solid #666;
+}
+
+ #poros-sub-menu textarea {
+   height: 10em;
+ }
+
+
+#poros-status {
+  background-color: #DDD;
+  opacity: .8;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  border-radius: 999px;
+  z-index: 999999;
+}
+
+#poros-status.poros-status-pull {
+  background-color: #E6C83E;
+}
+
+#poros-status.poros-status-push {
+  background-color: #3EB768;
+}
+
+#poros-status.poros-status-error {
+  background-color: #B73E68;
 }
