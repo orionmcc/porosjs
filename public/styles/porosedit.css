@@ -3,6 +3,10 @@
   border-bottom: 1px dashed #AAA;
 }
 
+.poros-actionable {
+  cursor: pointer;
+}
+
 #poros-toggle.poros-menu-closed {
   transform: rotate(-180deg);
 }
@@ -58,9 +62,9 @@
 
 #poros-menu a:hover {
   color: #444 !important;
-  box-shadow: 1px 1px 10px #CCC!important;
+  /*box-shadow: 1px 1px 10px #CCC!important;
   padding: 3px !important;
-  margin: -3px !important;
+  margin: -3px !important;*/
 }
 
 #poros-menu ul {
@@ -126,12 +130,24 @@
 }
 
 
-#poros-sub-menu input, #poros-sub-menu textarea {
+#poros-sub-menu input, #poros-sub-menu textarea, #poros-sub-menu select , #poros-sub-menu button {
   width: 100% !important;
   border-radius: 3px !important;
   box-sizing: border-box !important;
   padding: 10px !important;
-  border: 1px solid #666;
+  border: 1px solid #888 !important;
+}
+
+#poros-sub-menu #poros-button-okay {
+  background-color: rgb(107, 194, 239) !important;
+  color: #FFF !important;
+  cursor: pointer !important;
+}
+#poros-sub-menu #poros-button-cancel {
+  background-color: transparent !important;
+  color: #444 !important;
+  border: none !important;
+  cursor: pointer !important;
 }
 
  #poros-sub-menu textarea {
@@ -161,5 +177,5 @@
 }
 
 #poros-status.poros-status-error {
-  background-color: #B73E68;
+  background-color: #E02727;
 }

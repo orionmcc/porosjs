@@ -27,7 +27,8 @@
     "mongodb": "^2.0.52",
     "mustache": "^2.2.1",
     "node-sass-middleware": "^0.9.7",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "server-destroy": "^1.0.1"
   },
   "devDependencies": {
     "babel-plugin-typecheck": "^3.5.1",
