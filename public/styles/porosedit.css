@@ -39,9 +39,14 @@
   z-index: 999999;
   transform: translate3d(0px, 0px, 0px);
 
-  background-color: #EEE !important;
+  background-color: #E0E0E0 !important;
   font-size: 1.5em;
   transition: transform .4s;
+}
+
+#poros-menu #poros-menu-logout {
+  position: absolute;
+  bottom: 0;
 }
 
 #poros-menu h1, #poros-menu a {
@@ -147,6 +152,11 @@
   background-color: transparent !important;
   color: #444 !important;
   border: none !important;
+  cursor: pointer !important;
+}
+#poros-sub-menu #poros-button-delete {
+  background-color: transparent !important;
+  color: rgb(239, 107, 107) !important;
   cursor: pointer !important;
 }
 
