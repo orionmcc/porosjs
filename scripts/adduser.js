@@ -1,4 +1,5 @@
 
+'use strict';
 import DBAdapter from '../lib/database';
 import {passwordHash} from '../lib/authentication';
 import crypto from 'crypto';
@@ -62,7 +63,8 @@ async function go() {
   } else {
 
     try {
-      await DB.initialize();
+      // fix this
+      await DB.initialize('test-poros');
 
       const key = passwordHash(password, SALT, ITERATIONS);
       const USER = {
