@@ -7,6 +7,10 @@
   cursor: pointer;
 }
 
+.poros-hide {
+  display: none !important;
+}
+
 #poros-toggle.poros-menu-closed {
   transform: rotate(-180deg);
 }
