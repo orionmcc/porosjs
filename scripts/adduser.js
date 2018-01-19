@@ -64,7 +64,7 @@ async function go() {
 
     try {
       // fix this
-      await DB.initialize('test-poros');
+      await DB.initialize('poros-site');
 
       const key = passwordHash(password, SALT, ITERATIONS);
       const USER = {
@@ -73,6 +73,7 @@ async function go() {
         salt: SALT,
         iterations: ITERATIONS,
         guid: USER_ID,
+        tfa: false,
       }
 
       console.log(USER);
