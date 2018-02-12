@@ -14,6 +14,13 @@
 #poros-toggle.poros-menu-closed {
   transform: rotate(-180deg);
 }
+#poros-toggle:hover {
+  transform: scale(1.5);
+}
+#poros-toggle:hover.poros-menu-closed {
+  transform: scale(1.5) rotate(-180deg);
+}
+
 #poros-toggle {
   cursor: pointer;
   position: fixed;
@@ -32,15 +39,24 @@
   transform: translate3d(-1500px, 0px, 0px);
 }
 
+
 #poros-menu {
   position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: 999999;
+}
+
+#poros-main-menu{
+  position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
   width: 210px;
   padding: 25px 15px;
 
-  z-index: 999999;
   transform: translate3d(0px, 0px, 0px);
 
   background-color: #E0E0E0 !important;
@@ -48,7 +64,7 @@
   transition: transform .4s;
 }
 
-#poros-menu #poros-menu-logout {
+#poros-main-menu #poros-menu-logout {
   position: absolute;
   bottom: 0;
 }
@@ -85,13 +101,14 @@
   list-style: none;;
 }
 
-#poros-menu-close-button {
+#poros-menu-close-button,
+#poros-record-close-button{
   position: absolute;
   top: 10px;
   right: 20px;
 
   color: #444 !important;
-  font-size: 2em !important;
+  font-size: 1.2em !important;
   font-family: monospace !important;
   letter-spacing: -.3em !important;
   transition: transform .4s !important;
@@ -99,74 +116,103 @@
   cursor: pointer;
 }
 
+#poros-record-close-button:hover,
+#poros-menu-close-button:hover {
+  transform: scale(1.5);
+}
+
 #poros-sub-menu.small {
   position: fixed;
-  left: 242px;
+  left: 215px;
   top: 0;
   bottom: 0;
-  padding: 25px 15px;
+  padding: 55px 15px;
   overflow: auto;
 
   z-index: 999990;
   transform: translate3d(0px, 0px, 0px);
 
   background-color: #EEE !important;
-  font-size: 1.5em;
-  transition: transform .4s;
-}
-
-#poros-sub-menu.small {
+  transition: transform .1s;
   width: 240px;
-  font-size: 1em;
+  font-size: 1em !important;
+  font-family: monospace !important;
+  color: #000 !important;
 }
 
 #poros-sub-menu.poros-menu-closed {
-  transform: translate3d(-1000px, 0px, 0px);
+  transform: translate3d(-2000%, 0px, 0px);
 }
 
-#poros-sub-menu h2 {
+ #poros-record-edit {
+   position: fixed;
+   left: 470px;
+   top: 0;
+   bottom: 0;
+   right: 10px;
+   padding: 55px 15px;
+   overflow: auto;
+
+   z-index: 999990;
+   transform: translate3d(0px, 0px, 0px);
+
+   background-color: #EEE !important;
+   transition: transform .1s;
+   font-size: 1em !important;
+   font-family: monospace !important;
+   color: #000 !important;
+ }
+
+ #poros-record-edit.poros-menu-closed {
+   transform: translate3d(1000%, 0px, 0px);
+ }
+
+.poros-menu h2 {
   font-size: 1.25em !important;
   font-weight: normal !important;
+  color: #000 !important;
 }
 
-#poros-sub-menu ul {
+.poros-menuul {
   margin: 0;
   padding-left: 10px;
 }
 
-#poros-sub-menu li {
+.poros-menu li {
   margin-bottom: 20px;
 }
 
-
-#poros-sub-menu input, #poros-sub-menu textarea, #poros-sub-menu select , #poros-sub-menu button {
-  width: 100% !important;
-  border-radius: 3px !important;
-  box-sizing: border-box !important;
-  padding: 10px !important;
-  border: 1px solid #888 !important;
+.poros-menu input,
+.poros-menu textarea,
+.poros-menu select ,
+.poros-menu button {
+ width: 100% !important;
+ border-radius: 3px !important;
+ box-sizing: border-box !important;
+ padding: 10px !important;
+ border: 1px solid #888 !important;
 }
 
-#poros-sub-menu #poros-button-okay {
-  background-color: rgb(107, 194, 239) !important;
-  color: #FFF !important;
-  cursor: pointer !important;
+.poros-menu #poros-button-okay {
+ background-color: rgb(107, 194, 239) !important;
+ color: #FFF !important;
+ cursor: pointer !important;
 }
-#poros-sub-menu #poros-button-cancel {
-  background-color: transparent !important;
-  color: #444 !important;
-  border: none !important;
-  cursor: pointer !important;
+.poros-menu #poros-button-cancel {
+ background-color: transparent !important;
+ color: #444 !important;
+ border: none !important;
+ cursor: pointer !important;
 }
-#poros-sub-menu #poros-button-delete {
-  background-color: transparent !important;
-  color: rgb(239, 107, 107) !important;
-  cursor: pointer !important;
+.poros-menu #poros-button-delete {
+ background-color: transparent !important;
+ color: rgb(239, 107, 107) !important;
+ cursor: pointer !important;
 }
 
- #poros-sub-menu textarea {
-   height: 10em;
- }
+.poros-menu textarea {
+  height: 10em;
+}
 
 
 #poros-status {
