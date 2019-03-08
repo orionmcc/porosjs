@@ -10,12 +10,13 @@ const SALT = crypto.randomBytes(16).toString('base64');
 const ITERATIONS = 10000;
 
 let role = 'poros.admin';
+let database = '';
 let user = '';
 let password = '';
 
 function printUsage()
 {
-  console.log('npm run adduser USERNAME PASSWORD [a s u]')
+  console.log('npm run adduser SITE USERNAME PASSWORD [a s u]')
   console.log('    a    grants this user an admin access <default>')
   console.log('    s    grants this user superuser access')
   console.log('    u   grants this user readonly access')
@@ -26,11 +27,12 @@ async function go() {
   console.log('length ', process.argv.length, process.argv);
   for (let i = 2; i < process.argv.length; i++) {
     let a = process.argv[i];
-    console.log(a);
     if(a === 'help')
     {
       user = '';
       break;
+    } else if (database === '') {
+      database = a.toLowerCase();
     } else if (user === '') {
       user = a.toLowerCase();
     } else if (password === '') {
@@ -58,13 +60,13 @@ async function go() {
     // }
   }
 
-  if (user === '' || password === '') {
+  if (database === '' || user === '' || password === '') {
     printUsage();
   } else {
 
     try {
       // fix this
-      await DB.initialize('poros-site');
+      await DB.initialize(database);
 
       const key = passwordHash(password, SALT, ITERATIONS);
       const USER = {
@@ -76,7 +78,7 @@ async function go() {
         tfa: false,
       }
 
-      console.log(USER);
+      console.log(database, USER);
       let existingUser = await DB.databaseGet('users', user, null);
       if(existingUser.length) {
         console.error('Can not modify existing user');
