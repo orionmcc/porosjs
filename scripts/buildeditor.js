@@ -14,6 +14,7 @@ function concat(opts) {
 concat({
     src : [
         '../lib/editor_src/editor.js',
+        '../lib/editor_src/template.js',
         '../lib/editor_src/select.js',
         '../lib/editor_src/data.js',
         '../lib/editor_src/page.js',
