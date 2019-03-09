@@ -13,6 +13,7 @@ let role = 'poros.admin';
 let database = '';
 let user = '';
 let password = '';
+let project = '';
 
 function printUsage()
 {
@@ -31,8 +32,8 @@ async function go() {
     {
       user = '';
       break;
-    } else if (database === '') {
-      database = a.toLowerCase();
+    } else if (project === '') {
+      project = a;
     } else if (user === '') {
       user = a.toLowerCase();
     } else if (password === '') {
@@ -60,14 +61,12 @@ async function go() {
     // }
   }
 
-  if (database === '' || user === '' || password === '') {
+  if (user === '' || password === '' || project === '') {
     printUsage();
   } else {
 
     try {
-      // fix this
-      await DB.initialize(database);
-
+      await DB.initialize(project);
       const key = passwordHash(password, SALT, ITERATIONS);
       const USER = {
         auth: key.toString('base64'),

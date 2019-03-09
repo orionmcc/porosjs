@@ -9,7 +9,7 @@
     "lint": "eslint lib/**",
     "test": "echo \"Error: no test specified\" && exit 1",
     "adduser": "babel-node scripts/adduser",
-    "buildeditor": "node scripts/buildeditor"
+    "buildeditor": "babel-node scripts/buildeditor"
   },
   "author": "Orion McClelland",
   "license": "ISC",
