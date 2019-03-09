@@ -27,7 +27,7 @@
     "fs": "0.0.2",
     "handlebars": "^4.0.11",
     "mongodb": "^2.0.52",
-    "node-sass-middleware": "^0.9.7",
+    "node-sass-middleware": "^0.11.0",
     "path": "^0.12.7",
     "server-destroy": "^1.0.1",
     "speakeasy": "^2.0.0"
