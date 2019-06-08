@@ -16,10 +16,15 @@ export const env = {
   production: process.env.NODE_ENV == 'production',
 };
 
+export const services = {
+  charge: 'localhost:8080',
+};
+
 
 
 export default {
   email,
   env,
-  server
+  server,
+  services
 }

@@ -167,6 +167,10 @@
    transform: translate3d(1000%, 0px, 0px);
  }
 
+#poros-menu.poros-menu-closed #poros-record-edit {
+  display: none;
+}
+
 .poros-menu h2 {
   font-size: 1.25em !important;
   font-weight: normal !important;
