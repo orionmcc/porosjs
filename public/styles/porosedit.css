@@ -98,7 +98,12 @@
 }
 
 #poros-menu ul li {
-  list-style: none;;
+  list-style: none;
+}
+
+#poros-menu a.main-menu-selected {
+  font-weight: 700 !important;
+  color: #000 !important;
 }
 
 #poros-menu-close-button,
