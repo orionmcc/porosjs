@@ -2,8 +2,9 @@
   "name": "poros",
   "version": "1.0.0",
   "description": "Node based CMS",
-  "main": "app.js",
+  "main": "lib/entry.js",
   "scripts": {
+    "start": "node lib/entry.js",
     "prod": "pm2 start ecosystem.config.js --env production",
     "staging": "pm2 start ecosystem.config.js --env staging",
     "lint": "eslint lib/**",
