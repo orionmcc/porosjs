@@ -4,3 +4,4 @@ lib\porosedit.min.js
 ecosystem.config.js
 local.js
 *.log
+sendgrid.env
