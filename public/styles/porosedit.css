@@ -12,13 +12,14 @@
 }
 
 #poros-toggle.poros-menu-closed {
-  transform: rotate(-180deg);
+  /*transform: rotate(-180deg);*/
+  letter-spacing: -.1em !important;
 }
 #poros-toggle:hover {
-  transform: scale(1.5);
+/*transform: scale(1.5);*/
 }
 #poros-toggle:hover.poros-menu-closed {
-  transform: scale(1.5) rotate(-180deg);
+  /*transform: scale(1.5) rotate(-180deg);*/
 }
 
 #poros-toggle {
@@ -31,8 +32,8 @@
   color: #444 !important;
   font-size: 2em !important;
   font-family: monospace !important;
-  letter-spacing: -.3em !important;
-  transition: transform .4s !important;
+  transition: letter-spacing .4s !important;
+  letter-spacing: .5em !important;
 }
 
 #poros-menu.poros-menu-closed {
@@ -150,6 +151,10 @@
 }
 
  #poros-record-edit {
+   display: flex;
+   flex-direction: column;
+   min-width: 300px;
+   max-width: 600px;
    position: fixed;
    left: 470px;
    top: 0;
@@ -182,7 +187,7 @@
   color: #000 !important;
 }
 
-.poros-menuul {
+.poros-menu ul {
   margin: 0;
   padding-left: 10px;
 }
@@ -220,6 +225,11 @@
  border: none !important;
  cursor: pointer !important;
 }
+.poros-menu #poros-button-duplicate {
+ background-color: transparent !important;
+ color: rgb(107, 194, 239) !important;
+ cursor: pointer !important;
+}
 .poros-menu #poros-button-delete {
  background-color: transparent !important;
  color: rgb(239, 107, 107) !important;
@@ -228,6 +238,10 @@
 
 .poros-menu textarea {
   height: 10em;
+}
+
+#poros-record-edit ul{
+  display: unset
 }
 
 
