@@ -38,6 +38,7 @@
 
 #poros-menu.poros-menu-closed {
   transform: translate3d(-1500px, 0px, 0px);
+  display: none;
 }
 
 
