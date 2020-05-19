@@ -19,6 +19,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "@sendgrid/mail": "^7.0.1",
+    "basic-auth": "^2.0.1",
     "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.0",
     "csv-parse": "^4.4.1",
