@@ -236,6 +236,11 @@
  color: rgb(239, 107, 107) !important;
  cursor: pointer !important;
 }
+.poros-menu #poros-button-alphabetical {
+width: auto !important;
+padding: 0 5px !important;
+border: none !important;
+}
 
 .poros-menu textarea {
   height: 10em;

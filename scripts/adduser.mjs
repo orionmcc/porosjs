@@ -1,7 +1,9 @@
 
 'use strict';
-import DBAdapter from '../lib/database';
-import {passwordHash} from '../lib/authentication';
+import database from '../lib/database.js';
+import authentication from '../lib/authentication.js';
+const passwordHash = authentication.passwordHash;
+const DBAdapter = database.default;
 import crypto from 'crypto';
 let DB = new DBAdapter();
 
@@ -10,14 +12,13 @@ const SALT = crypto.randomBytes(16).toString('base64');
 const ITERATIONS = 10000;
 
 let role = 'poros.admin';
-let database = '';
 let user = '';
 let password = '';
 let project = '';
 
 function printUsage()
 {
-  console.log('npm run adduser SITE USERNAME PASSWORD [a s u]')
+  console.log('yarn adduser SITE USERNAME PASSWORD [a s u]')
   console.log('    a    grants this user an admin access <default>')
   console.log('    s    grants this user superuser access')
   console.log('    u   grants this user readonly access')
@@ -77,7 +78,6 @@ async function go() {
         tfa: false,
       }
 
-      console.log(database, USER);
       let existingUser = await DB.databaseGet('users', user, null);
       if(existingUser.length) {
         console.error('Can not modify existing user');
