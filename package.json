@@ -22,7 +22,7 @@
     "eslint": "^1.10.3",
     "express": "^4.13.3",
     "fs": "0.0.2",
-    "mongodb": "^2.0.52",
+    "mongodb": "^3.6.1",
     "mustache": "^2.2.1",
     "node-sass-middleware": "^0.9.7",
     "path": "^0.12.7"
