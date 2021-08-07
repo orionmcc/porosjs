@@ -10,9 +10,9 @@
     "staging": "pm2 start ecosystem.config.js --env staging",
     "lint": "eslint lib/**",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "adduser": "babel-node scripts/adduser.mjs",
-    "testemail": "babel-node scripts/testemail.mjs",
-    "buildeditor": "node scripts/buildeditor"
+    "add:user": "babel-node scripts/adduser.mjs",
+    "test:email": "babel-node scripts/testemail.mjs",
+    "build:editor": "node scripts/buildeditor"
   },
   "author": "Orion McClelland",
   "license": "ISC",

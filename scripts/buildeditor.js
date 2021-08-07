@@ -18,6 +18,7 @@ concat({
         '../lib/editor_src/data.js',
         '../lib/editor_src/page.js',
         '../lib/editor_src/tinymce.js',
+        '../lib/editor_src/json-diff.js',
     ],
     dest : '../lib/porosedit.js'
 });

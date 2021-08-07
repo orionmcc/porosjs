@@ -287,3 +287,7 @@ border: none !important;
     max-width: initial;
   }
 }
+
+.poros-editor-hidden-tab {
+  display: none;
+}
