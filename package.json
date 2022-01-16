@@ -5,9 +5,13 @@
   "main": "lib/entry.js",
   "scripts": {
     "start": "node lib/entry.js",
+    "start:debug": "node --inspect lib/entry.js",
     "start:watch": "pm2 start lib/entry.js --watch",
+    "development": "pm2 start ecosystem.config.js",
     "prod": "pm2 start ecosystem.config.js --env production",
     "staging": "pm2 start ecosystem.config.js --env staging",
+    "pm2:list": "pm2 list",
+    "pm2:stop": "pm2 stop all",
     "lint": "eslint lib/**",
     "test": "echo \"Error: no test specified\" && exit 1",
     "add:user": "babel-node scripts/adduser.mjs",
