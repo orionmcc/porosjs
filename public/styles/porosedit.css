@@ -97,6 +97,7 @@
 #poros-menu ul {
   margin: 0;
   padding-left: 30px;
+  box-sizing: border-box;
 }
 
 #poros-menu ul li {
@@ -290,4 +291,8 @@ border: none !important;
 
 .poros-editor-hidden-tab {
   display: none;
+}
+
+#poros-tfa-qrcode {
+  width: 100%;
 }

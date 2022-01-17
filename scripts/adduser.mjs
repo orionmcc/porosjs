@@ -18,7 +18,7 @@ let project = '';
 
 function printUsage()
 {
-  console.log('yarn adduser SITE USERNAME PASSWORD [a s u]')
+  console.log('yarn add:user SITE USERNAME PASSWORD [a s u]')
   console.log('    a    grants this user an admin access <default>')
   console.log('    s    grants this user superuser access')
   console.log('    u   grants this user readonly access')
@@ -76,6 +76,7 @@ async function go() {
         iterations: ITERATIONS,
         guid: USER_ID,
         tfa: false,
+        appname: project,
       }
 
       let existingUser = await DB.databaseGet('users', user, null);
