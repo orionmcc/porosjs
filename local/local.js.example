@@ -9,6 +9,7 @@ export const server = {
   port: process.env.APP_PORT || 3000,
   app: process.env.APP_NAME || 'poros-site',
   SESSION_SECRET: process.env.SESSION_SECRET || 'a super secret',
+  host: process.env.APP_URL || 'https://pledgemanager.unpossiblegamelabs.com',
 };
 
 export const env = {
